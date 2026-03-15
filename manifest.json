@@ -1,0 +1,30 @@
+{
+    "manifest_version": 3,
+    "name": "LeetCode Assistant",
+    "version": "1.0",
+    "description": "dummy description",
+    "author": "author",
+    "icons": {
+
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "service_worker": "background.js"
+    },
+    "permissions": ["activeTab", "storage", "scripting"],
+    "host_permissions": ["<all_urls>"],
+    "content_scripts": [
+  {
+    "matches": ["https://leetcode.com/*"], 
+    "js": ["content.js"]        
+  }
+],
+"web_accessible_resources": [
+    {
+      "resources": ["icons/*"],
+      "matches": ["https://leetcode.com/*"]
+    }
+  ]
+}
