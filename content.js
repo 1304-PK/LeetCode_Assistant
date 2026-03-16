@@ -1,5 +1,5 @@
 // PAGE ELEMENTS
-const buttonsContainer = document.getElementById("ide-top-btns") 
+const buttonsContainer = document.getElementById("ide-top-btns")
 
 // Hint Button
 const containerDiv = document.createElement("div")
@@ -45,10 +45,6 @@ hintBtn.addEventListener("click", async () => {
     const qsnDesc = document.querySelector('[data-track-load="description_content"]').innerText
     const code = document.querySelector('[data-mprt="7"]').innerText
     const codeLanguage = document.getElementById('editor').children[0].children[0].children[0].children[0].innerText
-    console.log(qsnTitle)
-    console.log(qsnDesc)
-    console.log(code)
-    console.log(codeLanguage)
 
     const response = await chrome.runtime.sendMessage({
         type: "generateHint",
@@ -57,6 +53,5 @@ hintBtn.addEventListener("click", async () => {
         code,
         codeLanguage
     })
-
     response.data ? popupText.innerText = response.data : popupText.innerText = response.error
 })
