@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "LeetCode Assistant",
   "version": "1.0",
-  "description": "LeetCode Assistant analyzes your code in real time...",
+  "description": "LeetCode Assistant analyzes your code in real time and provides AI-assisted guidance to help you move toward the optimal solution. Instead of revealing the full answer, it offers intelligent hints that help you think through the problem and improve your problem-solving skills while you code.",
   "author": "Pushkar",
   "action": {
     "default_popup": "popup.html"
